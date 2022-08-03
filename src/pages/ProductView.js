@@ -203,7 +203,7 @@ export default function ProductView(){
 							{
 								(user.id !== null)
 								?
-								<Button as={Link} to={`/showorder`} size="sm" className="margin-left" target="_blank" variant="danger" variant="primary" size="lg" onClick={() => addOrder(productId)}>Buy Now</Button>
+								<Button as={Link} to={`/showorder`} size="sm" className="margin-left" variant="danger" variant="primary" size="lg" onClick={() => addOrder(productId)}>Buy Now</Button>
 								:
 								<Button as={Link} to="/login" variant="primary" size="lg">Please Login To Order</Button>
 							}

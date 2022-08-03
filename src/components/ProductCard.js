@@ -28,7 +28,7 @@ const ProductCard = (props) => {
 
 	return(
 		
-			<Col xs={12} md={3}>
+			<Col xs={12} md={4}>
 				
 				    <Card border="primary" className="cardHighlight my-4">
 				    	<Card.Img variant="top" src={`https://drive.google.com/uc?export=view&id=${props.productProp.imageURL}`} className="img-fluid"/>

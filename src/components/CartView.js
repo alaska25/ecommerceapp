@@ -5,6 +5,7 @@ import {Navigate} from "react-router-dom";
 import UserContext from "../UserContext";
 import { CartProvider } from "react-use-cart";
 import Cart from "../pages/Cart";
+
 // import CartView from "../components/CartView"; 
 
 export default function CartView(){

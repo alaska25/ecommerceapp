@@ -22,9 +22,9 @@ a:hover{
   background-image:url("../public/images/overlay.png"), url("../public/images/carousel-1.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 850px;
+  height: 100vh;
   padding-top: 14rem;
-  padding-bottom: 14rem;
+  padding-bottom: 18rem;
 }
 .bg-image1{
   background: url("../public/images/carousel-1.png") center  no-repeat;

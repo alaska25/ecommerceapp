@@ -125,7 +125,7 @@ export default function Login(){
 		<>
 		<div className="container-fluid bg-image1">
 			<div>
-				<h1 className="fw-bold text-light text-center">Log In</h1>
+				<h1 className=" text-light text-center">Log In</h1>
 			</div>
 			<div className="d-flex justify-content-center container align-items-center my-5">
 				<Form className="rounded p-4 border text-light bg-dark" onSubmit ={(e) => login(e)}>

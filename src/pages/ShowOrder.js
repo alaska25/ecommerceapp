@@ -28,19 +28,18 @@ export default function CheckOut(){
             setProductCart(data.map(cart => {
                             return(
                                 <tr key={cart._id}>
-                                    <td className="readable">{cart.product}</td>
+                                    <td className="readable">{cart._id}</td>
                                     <td className="readable">{cart.price}</td>
                                     <td className="readable">{cart.quantity}</td>
-                                    <td>
-                                        <Button className="btn btn-danger" size="sm"  onClick={() => removeItem(cart)}> Remove </Button>
-                                    </td>
+                                    <td className="readable">{cart.total}</td>
+                                    <td><p className="text-center">Completed</p></td>
                                 </tr>
                             )
                     }))
                 })
             }
 
-            function removeItem(cart){
+            /*function removeItem(cart){
                 console.log(cart._id);
 
                     fetch(`${process.env.REACT_APP_API_URL}/products/removeCart`, {
@@ -77,7 +76,7 @@ export default function CheckOut(){
                         }
 
                     })
-            }
+            }*/
 
 
             useEffect(()=>{
@@ -88,21 +87,22 @@ export default function CheckOut(){
         return(
         <>
             <div className="mt-5 mb-3 text-center">
-                    <h1>Item Order From Clients</h1>
-                </div>
-                    <Table striped bordered hover variant="primary" className="container">
-                     <thead className="text-center fw-bold">
-                       <tr>
-                         <th>Product Name</th>
-                         <th>Price</th>
-                         <th>Quantity</th>
-                         <th>CheckOut</th>
-                       </tr>
-                     </thead>
-                     <tbody>
-                       { productCart }
-                     </tbody>
-                   </Table>
+                <h1 className="fw-bold text-success">Transaction History</h1>
+            </div>
+            <Table striped bordered hover variant="dark" className="container text-light">
+             <thead className="text-center fw-bold">
+               <tr>
+                 <th>Product_Id_Number</th>
+                 <th>Price</th>
+                 <th>Quantity</th>
+                 <th>Total</th>
+                 <th>Status</th>
+               </tr>
+             </thead>
+             <tbody className="text-center">
+               { productCart }
+             </tbody>
+           </Table>
         </>
 
     );

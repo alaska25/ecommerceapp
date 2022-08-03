@@ -17,6 +17,7 @@ export default function Home(){
 			<>
 				<Banner data={data}/>
 					<Container className="mt-5 pt-4">
+						
 						<Highlights />
 						<br/><br/>
 						

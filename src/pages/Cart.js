@@ -9,7 +9,7 @@ const Cart = () =>{
 	const navigate = useNavigate();
 
 	const { isEmpty, totalUniqueItems, items, totalItems, cartTotal, updateItemQuantity, removeItem, emptyCart } = useCart();
-	if(isEmpty) return <h1 className="text-center">Your Cart is Empty!</h1>
+	if(isEmpty) return <h1 className="text-center"></h1>
 
 	const list = JSON.parse(localStorage.getItem('react-use-cart'));
     console.log(list.items)
@@ -42,9 +42,9 @@ const Cart = () =>{
 
 	            if(data === true){
 	                Swal.fire({
-	                    title: "Item added",
+	                    title: "Transaction Completed",
 	                    icon: "success",
-	                    text: "This item has been added to your cart"
+	                    text: "The item ordered will be delivered on time!"
 	                })
 	                navigate("/showorder");
 	            }else{
@@ -89,8 +89,8 @@ const Cart = () =>{
 					<h2 className="fw-bold mt-3">Total Price: &#8369;{cartTotal}</h2>
 				</div>
 				<div className="col-auto mt-2">
-					<button className="btn btn-danger m-2 fw-bold" size="sm"onClick={()=> emptyCart()}>Clear Cart</button>
-					<button className="btn btn-primary m-2 fw-bold" size="sm" onClick={() => checkout()}>Buy Now</button>
+					<button className="btn btn-danger m-2 fw-bold" size="sm" onClick={()=> emptyCart()}>Clear Cart</button>
+					<button className="btn btn-primary m-2 fw-bold" size="sm" onClick={() => checkout()}>Check Out</button>
 				</div>
 			</div>
 		</section>
