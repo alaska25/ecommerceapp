@@ -1,12 +1,62 @@
 import { useState, useEffect, useContext } from "react";
 import React from "react";
 import { useCart } from "react-use-cart";
+import {Navigate, useNavigate} from "react-router-dom";
+import Swal from 'sweetalert2';
 
 const Cart = () =>{
+
+	const navigate = useNavigate();
+
 	const { isEmpty, totalUniqueItems, items, totalItems, cartTotal, updateItemQuantity, removeItem, emptyCart } = useCart();
 	if(isEmpty) return <h1 className="text-center">Your Cart is Empty!</h1>
 
+	const list = JSON.parse(localStorage.getItem('react-use-cart'));
+    console.log(list.items)
 
+    
+
+	function checkout(productProp){
+
+
+			const cartitem = list.items.map(item => {
+			// console.log(list)
+
+
+			fetch(`${process.env.REACT_APP_API_URL}/users/addOrder`,{
+	            method: "POST",
+	            headers:{
+	                "Content-Type" : "application/json",
+	                Authorization: `Bearer ${localStorage.getItem("token")}`
+	            },
+	            body: JSON.stringify({
+					productId: item.id,
+					productName: item.name,
+					price: item.price,
+					quantity: item.quantity
+	            })
+	        })
+	        .then(res => res.json())
+	        .then(data => {
+	            console.log(data);
+
+	            if(data === true){
+	                Swal.fire({
+	                    title: "Item added",
+	                    icon: "success",
+	                    text: "This item has been added to your cart"
+	                })
+	                navigate("/showorder");
+	            }else{
+	                Swal.fire({
+	                    title: "Please log in first!",
+	                    icon: "error",
+	                    text: "Please try again later."
+	                })
+	            }
+	        })
+		})
+	}
 
 	return(
 		<section className="py-4 container">
@@ -40,7 +90,7 @@ const Cart = () =>{
 				</div>
 				<div className="col-auto mt-2">
 					<button className="btn btn-danger m-2 fw-bold" size="sm"onClick={()=> emptyCart()}>Clear Cart</button>
-					<button className="btn btn-primary m-2 fw-bold" size="sm">Buy Now</button>
+					<button className="btn btn-primary m-2 fw-bold" size="sm" onClick={() => checkout()}>Buy Now</button>
 				</div>
 			</div>
 		</section>

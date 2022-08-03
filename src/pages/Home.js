@@ -16,14 +16,15 @@ export default function Home(){
 	return(
 			<>
 				<Banner data={data}/>
-
 					<Container className="mt-5 pt-4">
 						<Highlights />
 						<br/><br/>
 						
 						<Content />
 					</Container>
+
 				<SubFooter />
+				
 				<Footer />
 			</>
 		)

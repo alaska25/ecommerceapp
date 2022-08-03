@@ -28,9 +28,9 @@ a:hover{
 }
 .bg-image1{
   background: url("../public/images/carousel-1.png") center  no-repeat;
-   position: fixed; 
-   min-width: 100%;
-   min-height: 100%;
+  position: fixed; 
+  min-width: 100%;
+  min-height: 100%;
 
 }
 .border{

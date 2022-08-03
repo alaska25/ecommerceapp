@@ -10,6 +10,7 @@ import ProductView from "./pages/ProductView";
 import Error from "./pages/Error";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import AddOrder from "./pages/AddOrder";
 import Logout from "./pages/Logout";
 import Register from "./pages/Register";
 import {Container} from "react-bootstrap";
@@ -17,6 +18,7 @@ import './App.css';
 import Cart from "./pages/Cart";
 import { CartProvider } from "react-use-cart";
 import CartView from "./components/CartView";
+import ShowOrder from "./pages/ShowOrder";
 
 function App() {
 // to store the user information and will be used for validating if a user is already logged in on the app or not.
@@ -78,23 +80,22 @@ function App() {
     <UserProvider value={{user, setUser, unsetUser}}>
         <Router>
           <AppNavbar />
-          <Container fluid>
               <Routes>
                   <Route exact path ="/" element={<Home />} />
                   <Route exact path ="/admin" element={<AdminDashboard />} />
-                  <Route exact path ="/addProduct" element={<AddProduct />} />
-                  // <Route exact path ="/cart" element={<Cart />} />
+                  <Route exact path ="/addproduct" element={<AddProduct />} />
+                  <Route exact path ="/addorder" element={<AddOrder />} />
                   <Route exact path ="/cartview" element={<CartView />} />
                   <Route exact path="/editProduct/:productId" element={<EditProduct />}/>
                   <Route exact path ="/products" element={<Products />} />
                   <Route exact path ="/products/:productId" element={<ProductView />} />
                   <Route exact path ="/register" element={<Register />} />
+                  <Route exact path ="/showorder" element={<ShowOrder />} />
                   <Route exact path ="/login" element={<Login />} />
                   <Route exact path ="/logout" element={<Logout />} />
                   <Route exact path ="*" element={<Error />} />
 
               </Routes>
-          </Container>
         </Router>
     </UserProvider>
   </> 

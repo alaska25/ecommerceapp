@@ -33,9 +33,9 @@ export default function AppNavbar(){
 	            	<Nav.Link as={Link} to="/" eventKey="/"><FontAwesomeIcon icon={faHome} className="ms-1"></FontAwesomeIcon>&nbsp;Home </Nav.Link>
 	            	
 	              	{
-	              		(user.isAdmin)
+	              	(user.isAdmin)
 	              			? //if admin is true
-			              		<Nav.Link as={Link} to="/admin" active >AdminDashboard</Nav.Link>
+			              		<Nav.Link as={Link} to="/admin" eventKey="/admin" active >AdminDashboard</Nav.Link>
 			              	: //If not admin
 			              		<Nav.Link as={Link} to="/products" eventKey="/products"><FontAwesomeIcon icon={faList} className="ms-1"></FontAwesomeIcon>&nbsp;AllProducts</Nav.Link>
 	              	}

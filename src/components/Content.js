@@ -25,17 +25,17 @@ export default function Content(){
 				// console.log(product)
 				
 				return(
-						<ProductCard key={product._id} id={product._id} image={product.imageURL} title={product.name} description={product.description} price={product.price} productProp={product} />
+						<ProductCard key={product._id} id={product._id} image={product.imageURL} title={product.name} description={product.description} price={product.price} stocks={product.stocks} productProp={product} />
 					)
 			}))
 		})
 	},[])
 
 	return(
-			(user.isAdmin)
+			/*(user.isAdmin)
 				? // it means admin is true
 					<Navigate to="/admin"/>
-				:
+				:*/
 					<>
 						<Container>	
 							<CartProvider>
