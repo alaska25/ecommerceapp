@@ -166,7 +166,7 @@ export default function Register(){
 					<p className=" text-center">It's Quick and Easy!</p>
 
 					<div className="d-flex justify-content-center align-items-center">		
-					<Form className="rounded p-6 border p-sm-3 fw-bold bg-light" onSubmit = {(e) => registerUser(e)}>
+					<Form className="rounded p-6 border-1 p-sm-3 fw-bold bg-light" onSubmit = {(e) => registerUser(e)}>
 
 						<Form.Group className="mb-3" controlId="firstName">
 						  <Form.Label>First Name</Form.Label>

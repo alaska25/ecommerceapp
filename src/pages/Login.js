@@ -131,7 +131,7 @@ export default function Login(){
 				<Form className="rounded p-4 border bg-light fw-bold" onSubmit ={(e) => login(e)}>
 					<Form.Group className="mb-3" controlId="userEmail">
 					  <Form.Label>Email address</Form.Label>
-					  <Form.Control type="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.target.value)}/>
+					  <Form.Control type="email" placeholder="sample@mail.com" value={email} onChange={e => setEmail(e.target.value)}/>
 					  <Form.Text className="text-muted">
 					    We'll never share your email with anyone else.
 					  </Form.Text>
