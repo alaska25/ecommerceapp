@@ -59,7 +59,7 @@ const Cart = () =>{
 	}
 
 	return(
-		<section className="py-4 container">
+		<section className="py-4 container bg-light">
 			<div className="row justify-content-center">
 				<div className="col-12">
 					<h5 className="fw-bold">Cart ({totalUniqueItems}) Total Items: ({totalItems})</h5>

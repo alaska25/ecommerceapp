@@ -39,13 +39,13 @@ export default function Content(){
 					<>
 						<Container>	
 							<CartProvider>
-									<h1 className="text-center mt-5 fw-bold text-primary">Featured Products</h1>
+									<h1 className="text-center mt-5 fw-bold">Featured Products</h1>
 									<Row className="mt-3 mb-3">
 												{products}
 									</Row>
 								<br/><br/>
-								<hr/>
-								<Cart />
+								{/*<hr/>
+								<Cart />*/}
 							</CartProvider>
 
 						</Container>	

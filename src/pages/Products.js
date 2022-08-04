@@ -37,19 +37,21 @@ export default function Products(){
 					<Navigate to="/admin"/>
 				:
 					<>
-						<Container>	
-							<CartProvider>
-									<h1 className="text-center mt-5 fw-bold text-primary">Featured Products</h1>
-									<Row className="mt-3 mb-3">
-												{products}
-									</Row>
-								<br/><br/>
-								<hr/>
-								
-								<Cart />
-							</CartProvider>
 
-						</Container>	
+						<div className="container-fluid bg">
+							<div className="container">	
+								<CartProvider>
+										<h1 className="text-center fw-bold">Featured Products</h1>
+										<Row className="">
+													{products}
+										</Row>
+									<br/><br/>
+									
+									
+									<Cart />
+								</CartProvider>
+							</div>
+						</div>	
 					</>
 		)
 }

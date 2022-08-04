@@ -49,8 +49,19 @@ export default function AppNavbar(){
 	                		<>	
 	                    		<Nav.Link as={Link} to="/login" eventKey="/login"><FontAwesomeIcon icon={faUser} className="ms-1"></FontAwesomeIcon>&nbsp;Login</Nav.Link>
 	                        	<Nav.Link as={Link} to="/register" eventKey="/register"><FontAwesomeIcon icon={faAddressCard} className="ms-1"></FontAwesomeIcon>&nbsp;Register</Nav.Link>
-	                        	<Nav.Link as={Link} to="/cartview" eventKey="/cartview"><FontAwesomeIcon icon={faCartShopping} className="ms-1"></FontAwesomeIcon> </Nav.Link>
+	                        	
 	                	   	</>
+	                }
+
+	                {
+	                
+                                (user.isAdmin)
+                                ?
+                                  <Nav.Link as={Link} to="/cartview" eventKey="/cartview"><FontAwesomeIcon icon={faCartShopping} className="ms-1" hidden></FontAwesomeIcon> </Nav.Link>
+                                :
+                                  <Nav.Link as={Link} to="/cartview" eventKey="/cartview"><FontAwesomeIcon icon={faCartShopping} className="ms-1"></FontAwesomeIcon> </Nav.Link>
+                                 
+                 
 	                }
 
 

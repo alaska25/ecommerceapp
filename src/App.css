@@ -65,9 +65,9 @@ li{
   background-color: maroon;
 }*/
 
-.bg{
+/*.bg{
   background-color: grey;
-}
+}*/
 
 .card{
     background: #fff;
@@ -84,4 +84,9 @@ li{
 
 .ms-1 {
   margin-left: ($spacer * .25) !important;
+}
+
+.bg{
+    background-color: #e1f0e5;
+    min-height: 100vh;
 }

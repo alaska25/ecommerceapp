@@ -123,12 +123,12 @@ export default function Login(){
 			<Navigate to="/admin"/>
 		:
 		<>
-		<div className="container-fluid bg-image1">
+		<div className="container-fluid bg">
 			<div>
-				<h1 className=" text-light text-center">Log In</h1>
+				<h1 className="pt-3 text-center">Log In</h1>
 			</div>
 			<div className="d-flex justify-content-center container align-items-center my-5">
-				<Form className="rounded p-4 border text-light bg-dark" onSubmit ={(e) => login(e)}>
+				<Form className="rounded p-4 border bg-light fw-bold" onSubmit ={(e) => login(e)}>
 					<Form.Group className="mb-3" controlId="userEmail">
 					  <Form.Label>Email address</Form.Label>
 					  <Form.Control type="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.target.value)}/>
@@ -138,7 +138,7 @@ export default function Login(){
 					</Form.Group>
 
 					<Form.Group className="mb-3" controlId="password">
-					  <Form.Label>Password</Form.Label>
+					  <Form.Label>Password*</Form.Label>
 					  <Form.Control type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)}/>
 					</Form.Group>
 						
@@ -146,7 +146,7 @@ export default function Login(){
 						isActive
 						?
 						<div className="d-grid gap-2">
-							<Button variant="danger" type="submit" id="submitBtn">
+							<Button variant="success" type="submit" id="submitBtn">
 							  Log In
 							</Button>
 						</div>
@@ -157,8 +157,8 @@ export default function Login(){
 							</Button>
 						</div>
 					}
-					<p className="text-light text-center mt-2">Not a member yet? <a href="http://localhost:3000/register">Sign Up here</a></p>
-					<Button as={Link} to="/" type="submit" variant="danger" id="submitBtn" size="sm" className="mt-3">
+					<p className="text-center mt-2">Not a member yet?&nbsp;Sign Up <a href="http://localhost:3000/register">here</a></p>
+					<Button as={Link} to="/" type="submit" variant="danger" id="submitBtn" size="sm" className="mt-1">
 					  Cancel
 					</Button>
 			

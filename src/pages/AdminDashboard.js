@@ -141,8 +141,8 @@ export default function AdminDashboard(){
           <Container className="mt-1 pt-4 responsive">
             <div className="mt-5 mb-3 text-center">
               <h1 className="text-center fw-bold text-capitalize">Admin Dashboard</h1><br/>
-              <Button as={Link} to="/addProduct" eventKey="/addProduct" variant="primary" size="md" className="mx-2" >Add Product</Button>
-              <Button>Show Orders</Button>
+              <Button as={Link} to="/addProduct" eventKey="/addProduct" variant="primary" size="md" className="mx-2"> Add Product </Button>
+              <Button as={Link} to="/orderlist" eventKey="/orderlist" variant="primary" size="md" className="mx-2">Order List</Button>
             </div><br/>
             <Table striped bordered hover responsive>
                <thead>

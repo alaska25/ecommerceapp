@@ -161,51 +161,51 @@ export default function Register(){
 		:
 
 		<>
-				<div className="container bg-image1 responsive">	
-					<h1 className=" text-center text-light">Sign Up</h1>
-					<p className=" text-center text-light">It's Quick and Easy!</p>
+				<div className="container-fluid responsive bg ">	
+					<h1 className=" text-center p-1">Sign Up</h1>
+					<p className=" text-center">It's Quick and Easy!</p>
 
 					<div className="d-flex justify-content-center align-items-center">		
-					<Form className="rounded p-6 border p-sm-3 text-light bg-dark" onSubmit = {(e) => registerUser(e)}>
+					<Form className="rounded p-6 border p-sm-3 fw-bold bg-light" onSubmit = {(e) => registerUser(e)}>
 
 						<Form.Group className="mb-3" controlId="firstName">
 						  <Form.Label>First Name</Form.Label>
-						  <Form.Control type="text" placeholder="First Name" value={firstName} onChange={e => setFirstName(e.target.value)}/>
+						  <Form.Control type="text" placeholder="" value={firstName} onChange={e => setFirstName(e.target.value)}/>
 						</Form.Group>
 
-						<Form.Group className="mb-3" controlId="lastName">
+						<Form.Group className="mb-3" controlId="">
 						  <Form.Label>Last Name</Form.Label>
-						  <Form.Control type="text" placeholder="Last Name" value={lastName} onChange={e => setLastName(e.target.value)}/>
+						  <Form.Control type="text" placeholder="" value={lastName} onChange={e => setLastName(e.target.value)}/>
 						</Form.Group>
 
 						<Form.Group className="mb-3" controlId="mobileNo">
 						  <Form.Label>Mobile Number</Form.Label>
-						  <Form.Control type="number" placeholder="Mobile Number" value={mobileNo} onChange={e => setMobileNo(e.target.value)}/>
+						  <Form.Control type="number" placeholder="" value={mobileNo} min="0" onChange={e => setMobileNo(e.target.value)}/>
 						</Form.Group>
 
 					      <Form.Group className="mb-3" controlId="userEmail">
 					        <Form.Label>Email address</Form.Label>
-					        <Form.Control type="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.target.value)}/>
+					        <Form.Control type="email" placeholder="sample@mail.com" value={email} onChange={e => setEmail(e.target.value)}/>
 					        <Form.Text className="text-muted">
 					          We'll never share your email with anyone else.
 					        </Form.Text>
 					      </Form.Group>
 
 					      <Form.Group className="mb-3" controlId="password1">
-					        <Form.Label>Password</Form.Label>
-					        <Form.Control type="password" placeholder="Password" value={password1} onChange={e => setPassword1(e.target.value)}/>
+					        <Form.Label>Password*</Form.Label>
+					        <Form.Control type="password" placeholder="" value={password1} onChange={e => setPassword1(e.target.value)}/>
 					      </Form.Group>
 
 					      <Form.Group className="mb-3" controlId="password2">
-					        <Form.Label>Verify Password</Form.Label>
-					        <Form.Control type="password" placeholder="Verify Password" value={password2} onChange={e => setPassword2(e.target.value)}/>
+					        <Form.Label>Verify Password*</Form.Label>
+					        <Form.Control type="password" placeholder="" value={password2} onChange={e => setPassword2(e.target.value)}/>
 					      </Form.Group>
 				      
 				      {
 				      	isActive
 				      	?
 				      		<div className="d-grid gap-2">
-				      		<Button variant="danger" type="submit" id="submitBtn">
+				      		<Button variant="success" type="submit" id="submitBtn">
 				      		  Sign Up
 				      		</Button>
 				      		</div>
@@ -217,8 +217,8 @@ export default function Register(){
 				      		</Button>
 				      		</div>
 				      }
-				    <p className="text-light text-center mt-2">Already registered? <a href="http://localhost:3000/login">Log In here</a></p>
-				    <Button as={Link} to="/" type="submit" variant="danger" id="submitBtn" size="sm" className="mt-3">
+				    <p className="text-center mt-2">Already Registered?&nbsp;Log In <a href="http://localhost:3000/login">here</a></p>
+				    <Button as={Link} to="/" type="submit" variant="danger" id="submitBtn" size="sm" className="mt-1">
 					  Cancel
 					</Button>
 

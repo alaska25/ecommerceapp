@@ -10,8 +10,9 @@ import ProductView from "./pages/ProductView";
 import Error from "./pages/Error";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import AddOrder from "./pages/AddOrder";
+import OrderList from "./pages/OrderList";
 import Logout from "./pages/Logout";
+import MyAccount from "./pages/MyAccount";
 import Register from "./pages/Register";
 import {Container} from "react-bootstrap";
 import './App.css';
@@ -84,12 +85,13 @@ function App() {
                   <Route exact path ="/" element={<Home />} />
                   <Route exact path ="/admin" element={<AdminDashboard />} />
                   <Route exact path ="/addproduct" element={<AddProduct />} />
-                  <Route exact path ="/addorder" element={<AddOrder />} />
+                  <Route exact path ="/myaccount" element={<MyAccount />} />
                   <Route exact path ="/cartview" element={<CartView />} />
                   <Route exact path="/editProduct/:productId" element={<EditProduct />}/>
                   <Route exact path ="/products" element={<Products />} />
                   <Route exact path ="/products/:productId" element={<ProductView />} />
                   <Route exact path ="/register" element={<Register />} />
+                  <Route exact path ="/orderlist" element={<OrderList />} />
                   <Route exact path ="/showorder" element={<ShowOrder />} />
                   <Route exact path ="/login" element={<Login />} />
                   <Route exact path ="/logout" element={<Logout />} />
