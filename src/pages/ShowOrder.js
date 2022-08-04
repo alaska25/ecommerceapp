@@ -28,6 +28,7 @@ export default function CheckOut(){
             setProductCart(data.map(cart => {
                             return(
                                 <tr key={cart._id}>
+                                    <td className="readable">{cart.userId}</td>
                                     <td className="readable">{cart._id}</td>
                                     <td className="readable">{cart.price}</td>
                                     <td className="readable">{cart.quantity}</td>
@@ -39,45 +40,6 @@ export default function CheckOut(){
                 })
             }
 
-            /*function removeItem(cart){
-                console.log(cart._id);
-
-                    fetch(`${process.env.REACT_APP_API_URL}/products/removeCart`, {
-                        method: "DELETE",
-                        headers: {
-                            "Content-Type": "application/json",
-                            "Authorization": `Bearer ${localStorage.getItem('token')}`
-                        },
-                        body: JSON.stringify({
-                           productId: cart._id
-                        })
-                    })
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data);
-
-                        if(data){
-                            Swal.fire({
-                                title: "Product succesfully Added",
-                                icon: "success",
-                                text: `Item is now deleted`
-                            });
-
-                            // navigate("/admin");
-
-                            orders();
-                        }
-                        else{
-                            Swal.fire({
-                                title: "Error!",
-                                icon: "error",
-                                text: `Something went wrong. Please try again later!`
-                            });
-                        }
-
-                    })
-            }*/
-
 
             useEffect(()=>{
                     // Get orders in the first render
@@ -87,11 +49,12 @@ export default function CheckOut(){
         return(
         <>
             <div className="mt-5 mb-3 text-center">
-                <h1 className="fw-bold text-success">Transaction History</h1>
+                <h1 className="fw-bold text-success">Order History</h1>
             </div>
             <Table striped bordered hover variant="dark" className="container text-light">
              <thead className="text-center fw-bold">
                <tr>
+                 <th>User_Id</th>
                  <th>Product_Id_Number</th>
                  <th>Price</th>
                  <th>Quantity</th>

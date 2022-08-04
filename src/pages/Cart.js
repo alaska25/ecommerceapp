@@ -30,6 +30,7 @@ const Cart = () =>{
 	                Authorization: `Bearer ${localStorage.getItem("token")}`
 	            },
 	            body: JSON.stringify({
+	            	userId: item.userId,
 					productId: item.id,
 					productName: item.name,
 					price: item.price,
@@ -68,6 +69,7 @@ const Cart = () =>{
 						{items.map((item, index)=>{
 									return(
 										<tr key={index}>
+											<td>{item.userId}</td>
 											<td>{item.name}</td>
 											<td>{item.price}</td>
 											<td>Quantity ({item.quantity})</td>

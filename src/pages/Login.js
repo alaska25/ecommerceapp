@@ -139,7 +139,7 @@ export default function Login(){
 
 					<Form.Group className="mb-3" controlId="password">
 					  <Form.Label>Password*</Form.Label>
-					  <Form.Control type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)}/>
+					  <Form.Control type="password" placeholder="" value={password} onChange={e => setPassword(e.target.value)}/>
 					</Form.Group>
 						
 					{

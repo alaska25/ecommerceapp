@@ -6,7 +6,7 @@ export default function Highlights(){
 			                <Card className="cardHighlight p-3 hover">
 			                    <Card.Body>
 			                        <Card.Title>
-			                            <h2 className="fw-bold text-center text-success">HUAWEI<br/></h2>
+			                            <h2 className="fw-bold text-center">HUAWEI<br/></h2>
 			                        </Card.Title>
 			                        <hr/>
 			                        <Card.Text className="fw-bold d-flex text-center">
@@ -20,7 +20,7 @@ export default function Highlights(){
 			                <Card className="cardHighlight p-3">
 			                    <Card.Body>
 			                        <Card.Title>
-			                            <h2 className="fw-bold text-center text-success">SAMSUNG<br/></h2>
+			                            <h2 className="fw-bold text-center">SAMSUNG<br/></h2>
 			                        </Card.Title>
 			                        <hr/>
 			                        <Card.Text className="fw-bold d-flex text-center">
@@ -34,7 +34,7 @@ export default function Highlights(){
 			                <Card className="cardHighlight p-3">
 			                    <Card.Body>
 			                        <Card.Title>
-			                            <h2 className="fw-bold text-center text-success">DELL<br/></h2>
+			                            <h2 className="fw-bold text-center">DELL<br/></h2>
 			                        </Card.Title>
 			                        <hr/>
 			                        <Card.Text className="fw-bold d-flex text-center">
