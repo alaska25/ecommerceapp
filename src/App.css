@@ -46,6 +46,7 @@ a:hover{
 
 .active:hover a{
   background-color: green;
+  border: white;
 }
 
 /*.bg{

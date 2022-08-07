@@ -24,7 +24,7 @@ export default function Banner({data}){
 						      <Carousel.Item>
 						        <Col className="p-5 text-center">
 			        				<h1 className="text-warning  fw-bold">Shopping Place For Everyone!</h1>
-			        				<p className="text-light fw-bold">Check out out most favourited & best selling product for this month...</p>
+			        				<p className="text-light fw-bold">Check out our most favourited & best selling product for this month...</p>
 			        				<Button as={Link} to={destination} variant="primary">All Products</Button>
 						        </Col>
 
