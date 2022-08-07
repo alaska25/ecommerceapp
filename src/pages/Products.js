@@ -25,7 +25,7 @@ export default function Products(){
 				// console.log(product._id)
 				
 				return(
-					<ProductCard key={product._id} id={product._id} image={product.imageURL} title={product.name} description={product.description} price={product.price} stocks={product.stocks} productProp={product} />
+					<ProductCard key={product._id} name={product.name} id={product._id} image={product.imageURL} title={product.name} description={product.description} price={product.price} stocks={product.stocks} productProp={product} />
 				)
 			}))
 		})

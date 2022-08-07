@@ -20,9 +20,11 @@ import Cart from "./pages/Cart";
 import { CartProvider } from "react-use-cart";
 import CartView from "./components/CartView";
 import ShowOrder from "./pages/ShowOrder";
+import ClientList from "./pages/ClientList";
 
 function App() {
 // to store the user information and will be used for validating if a user is already logged in on the app or not.
+
   const [user, setUser] = useState({
     // email: localStorage.getItem("email")
     id: null,
@@ -92,6 +94,7 @@ function App() {
                   <Route exact path ="/products/:productId" element={<ProductView />} />
                   <Route exact path ="/register" element={<Register />} />
                   <Route exact path ="/orderlist" element={<OrderList />} />
+                  <Route exact path ="/clientlist" element={<ClientList />} />
                   <Route exact path ="/showorder" element={<ShowOrder />} />
                   <Route exact path ="/login" element={<Login />} />
                   <Route exact path ="/logout" element={<Logout />} />

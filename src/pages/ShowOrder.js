@@ -27,13 +27,15 @@ export default function CheckOut(){
 
             setProductCart(data.map(cart => {
                             return(
-                                <tr key={cart._id}>
-                                    <td className="readable">{cart.userId}</td>
-                                    <td className="readable">{cart._id}</td>
-                                    <td className="readable">{cart.price}</td>
-                                    <td className="readable">{cart.quantity}</td>
-                                    <td className="readable">{cart.total}</td>
-                                    <td><p className="text-center">Completed</p></td>
+                                <tr key={cart._id} className="text-center">
+                                    <td>{cart.userId}</td>
+                                    <td>{cart._id}</td>
+                                    <td>{cart.productName}</td>
+                                    <td>{cart.price}</td>
+                                    <td>{cart.quantity}</td>
+                                    <td>{cart.total}</td>
+                                    <td>{cart.purchasedOn}</td>
+                                    <td>{cart.status}</td>
                                 </tr>
                             )
                     }))
@@ -49,16 +51,18 @@ export default function CheckOut(){
         return(
         <>
             <div className="mt-5 mb-3 text-center">
-                <h1 className="fw-bold text-success">Order History</h1>
+                <h1 className="fw-bold">Order History</h1>
             </div>
-            <Table striped bordered hover variant="dark" className="container text-light">
+            <Table striped bordered hover  className="container">
              <thead className="text-center fw-bold">
                <tr>
                  <th>User_Id</th>
                  <th>Product_Id_Number</th>
+                 <th>Product_Name</th>
                  <th>Price</th>
                  <th>Quantity</th>
                  <th>Total</th>
+                 <th>Date</th>
                  <th>Status</th>
                </tr>
              </thead>

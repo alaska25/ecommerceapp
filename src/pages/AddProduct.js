@@ -89,7 +89,7 @@ export default function AddProduct() {
     	?
 			<>
 			 <Container className="mt-5 pt-4">
-		    	<h1 className="my-5 text-center">Add a Product</h1>
+		    	<h1 className="my-5 text-center fw-bold">Add a Product</h1>
 		        <Form onSubmit={(e) => addProduct(e)}>
     	        	<Form.Group controlId="imageURL" className="mb-3">
     	                <Form.Label>Image URL</Form.Label>

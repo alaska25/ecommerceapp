@@ -15,13 +15,13 @@ const ProductCard = (props) => {
 
 	useEffect(() => {
 	setMyProduct({
-	  id: props.id,
-	  imageURL: props.image,
-	  name: props.title,
-	  description: props.description,
-	  price: props.price,
-	  stocks: props.stocks
-	});
+			  id: props.id,
+			  imageURL: props.image,
+			  name: props.title,
+			  description: props.description,
+			  price: props.price,
+			  stocks: props.stocks
+		});
 	}, []);
 
 	// console.log(myProduct)

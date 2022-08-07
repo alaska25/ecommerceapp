@@ -28,13 +28,13 @@ export default function OrderList(){
             setProductCart(data.map(cart => {
                             return(
                                     <tr key={cart._id}>
-                                        <td className="readable">{cart.userId}</td>
-                                        <td className="readable">{cart.productName}</td>
-                                        <td className="readable">{cart.productId}</td>
-                                        <td className="readable">{cart.price}</td>
-                                        <td className="readable">{cart.quantity}</td>
-                                        <td className="readable">{cart.total}</td>
-                                        <td><p className="text-center">Completed</p></td>
+                                        <td>{cart.userId}</td>
+                                        <td>{cart.productName}</td>
+                                        <td>{cart.productId}</td>
+                                        <td>{cart.price}</td>
+                                        <td>{cart.quantity}</td>
+                                        <td>{cart.total}</td>
+                                        <td>{cart.status}</td>
                                     </tr>
                                 )
                             }))

@@ -16,18 +16,14 @@ export default function Home(){
 	return(
 			<>
 				<div className="bg">
-				<Banner data={data}/>
-					<Container className="mt-5 pt-4">
-						<Highlights />
-						<br/><br/>
-						
-						<Content />
-					</Container>
-
-				<SubFooter />
-				
-				<Footer />
+					<Banner data={data}/>
+						<Container className="mt-5 pt-4">
+							<Highlights />
+							<Content />
+						</Container>
+						<Footer />
 				</div>
+				
 			</>
 		)
 }

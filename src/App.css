@@ -23,8 +23,8 @@ a:hover{
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  padding-top: 14rem;
-  padding-bottom: 18rem;
+  padding-top: 18rem;
+  padding-bottom: 22rem;
 }
 .bg-image1{
   background: url("../public/images/carousel-1.png") center  no-repeat;
@@ -36,23 +36,6 @@ a:hover{
 .border{
   border-right: 2px solid black;
 }
-li{
-  display: inline;
-}
-
-
-.my-image {
-  overflow: hidden;
-}
-
-
-.my-image img {
-  transition: all 1.4s ease;
-}
-
-.my-image:hover img {
-  transform: scale(1.2);
-}
 
 .margin-left{
     margin-left: 8px !important;
@@ -61,9 +44,9 @@ li{
     margin-right: -2px !important;
 }
 
-/*.active:hover {
-  background-color: maroon;
-}*/
+.active:hover a{
+  background-color: green;
+}
 
 /*.bg{
   background-color: grey;
@@ -90,3 +73,17 @@ li{
     background-color: #dce3c5;
     min-height: 100vh;
 }
+
+/*@media screen and (max-width: 600px) {
+  .bg-image {
+    min-height: auto;
+    min-width: 100%;;
+  }
+}*/
+
+/*@media screen and (max-width: 800px) {
+  .bg-image {
+    min-height: auto;
+    min-width: 100%;
+  }
+}*/
